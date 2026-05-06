@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annual Dance Concert Sponsorship Proposal — No Boundaries Dance Foundation</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --mint: #3fffc8;
+    --mint-dark: #00c49a;
+    --mint-label: #007a61;
+    --mint-light: rgba(63,255,200,0.10);
+    --mint-mid: rgba(63,255,200,0.22);
+    --dark: #111111;
+    --mid: #3a3a3a;
+    --subtle: #777;
+    --rule: #e2e2e2;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: white;
+    font-family: 'Barlow', Helvetica, Arial, sans-serif;
+    color: var(--dark);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 816px;
+    height: 1056px;
+    background: var(--white);
+    margin: 0 auto;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .header {
+    background: var(--dark);
+    padding: 36px 56px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .header-logo img {
+    height: 44px;
+    width: auto;
+    display: block;
+  }
+
+  .header-meta { text-align: right; }
+
+  .header-meta .label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mint);
+    margin-bottom: 4px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  }
+
+  .header-meta .city {
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 400;
+  }
+
+  .title-band {
+    background: var(--mint);
+    padding: 22px 56px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .title-band h1 {
+    font-family: 'Barlow Condensed', Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--dark);
+    line-height: 1;
+  }
+
+  .title-band .subtitle {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.5);
+    letter-spacing: 0.03em;
+  }
+
+  .body {
+    padding: 44px 56px 56px;
+    flex: 1;
+  }
+
+  .recipient {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1.5px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .recipient-to {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .recipient-to .to-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mint-label);
+    margin-bottom: 6px;
+  }
+
+  .recipient-to .to-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.4;
+  }
+
+  .recipient-to .to-sub {
+    font-size: 13px;
+    color: var(--subtle);
+    margin-top: 2px;
+  }
+
+  .recipient-date {
+    font-size: 12px;
+    color: var(--subtle);
+    text-align: right;
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 1px;
+    background: var(--rule);
+    border: 1.5px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+
+  .stat-box {
+    flex: 1;
+    background: var(--white);
+    padding: 18px 20px;
+    text-align: center;
+  }
+
+  .stat-box .stat-num {
+    font-family: 'Barlow Condensed', Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-box .stat-num span { color: var(--mint-dark); }
+
+  .stat-box .stat-label {
+    font-size: 11px;
+    color: var(--subtle);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+  }
+
+  .section { margin-bottom: 30px; }
+
+  .section-title {
+    font-family: 'Barlow Condensed', Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--mint-label);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--mint-dark);
+  }
+
+  .section p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--mid);
+    text-wrap: pretty;
+    margin-bottom: 10px;
+  }
+
+  .section p:last-child { margin-bottom: 0; }
+
+  .bullet-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .bullet-list li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--mid);
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .bullet-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 7px;
+    height: 2px;
+    background: var(--mint-dark);
+    border-radius: 1px;
+  }
+
+  .bullet-list li strong { color: var(--dark); font-weight: 600; }
+
+  /* SPONSORSHIP AREA CARDS */
+  .area-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+
+  .area-card {
+    border: 1.5px solid var(--rule);
+    border-radius: 6px;
+    padding: 16px 18px;
+  }
+
+  .area-card .area-num {
+    font-family: 'Barlow Condensed', Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mint-label);
+    margin-bottom: 4px;
+  }
+
+  .area-card .area-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .area-card .area-desc {
+    font-size: 12.5px;
+    color: var(--subtle);
+    line-height: 1.5;
+  }
+
+  .area-card-wide {
+    grid-column: 1 / -1;
+    background: var(--mint-light);
+    border-color: rgba(63,255,200,0.3);
+  }
+
+  /* HIGHLIGHT BOX */
+  .highlight-box {
+    background: var(--mint-light);
+    border-left: 3px solid var(--mint-dark);
+    border-radius: 0 4px 4px 0;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+  }
+
+  .highlight-box .hb-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+
+  .highlight-box .hb-amount {
+    font-family: 'Barlow Condensed', Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .highlight-box .hb-sub {
+    font-size: 13px;
+    color: var(--mid);
+  }
+
+  .sig-block { margin-top: 28px; }
+
+  .sig-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .sig-title {
+    font-size: 13px;
+    color: var(--subtle);
+    margin-top: 2px;
+  }
+
+  .footer {
+    background: var(--dark);
+    padding: 14px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-org {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.04em;
+  }
+
+  .footer-accent {
+    width: 28px;
+    height: 2px;
+    background: var(--mint);
+    border-radius: 1px;
+  }
+
+  /* TIER CARDS */
+  .tier-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+
+  .tier-card {
+    border: 1.5px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .tier-header {
+    padding: 14px 16px 12px;
+    border-bottom: 1.5px solid var(--rule);
+  }
+
+  .tier-badge {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  .tier-name {
+    font-family: 'Barlow Condensed', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .tier-price {
+    font-family: 'Barlow Condensed', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-top: 2px;
+  }
+
+  .tier-card.gold .tier-header { background: rgba(63,255,200,0.12); border-bottom-color: rgba(63,255,200,0.25); }
+  .tier-card.gold .tier-name { color: var(--dark); }
+
+  .tier-body {
+    padding: 14px 16px;
+  }
+
+  .tier-body ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .tier-body ul li {
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--mid);
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .tier-body ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 2px;
+    background: var(--mint-dark);
+    border-radius: 1px;
+  }
+
+  .tier-body ul li strong { color: var(--dark); font-weight: 600; }
+
+  @media print {
+    @page { size: letter portrait; margin: 0; }
+    html, body { background: white; width: 100%; }
+    .page {
+      width: 100%;
+      margin: 0;
+      box-shadow: none;
+      min-height: 100vh;
+      break-after: page;
+      page-break-after: always;
+    }
+    }
+
+  /* ---- PRINT ---- */
+  @media print {
+    @page {
+      size: 816px 1056px;
+      margin: 0;
+    }
+    html, body {
+      background: white !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 816px !important;
+    }
+    .page {
+      width: 816px !important;
+      height: 1056px !important;
+      overflow: hidden !important;
+      box-shadow: none !important;
+      margin: 0 !important;
+      page-break-after: always;
+      break-after: page;
+    }
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== PAGE 1 — CITY COUNCIL ===================== -->
+<div class="page">
+  <div class="header">
+    <div class="header-logo">
+      <img src="uploads/NBDF LOGO HOR@4x-0a31fb11.png" alt="No Boundaries Dance Foundation">
+    </div>
+    <div class="header-meta">
+      <div class="label">Official Proposal</div>
+      <div class="city">Submitted to the City of Moreno Valley</div>
+    </div>
+  </div>
+
+  <div class="title-band">
+    <h1>Annual Dance Concert Sponsorship</h1>
+    <span class="subtitle">City Council Partnership · June 26–27</span>
+  </div>
+
+  <div class="body">
+
+    <div class="recipient">
+      <div class="recipient-to">
+        <div class="to-label">Submitted To</div>
+        <div class="to-name">Moreno Valley City Council</div>
+        <div class="to-sub">City of Moreno Valley, California</div>
+      </div>
+      <div class="recipient-date">May 2026</div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-num"><span>3</span></div>
+        <div class="stat-label">Performances<br>June 26–27</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num"><span>2,500</span></div>
+        <div class="stat-label">Anticipated<br>Attendees</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">$<span>1,000</span></div>
+        <div class="stat-label">Sponsorship<br>Per Council Member</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">$<span>5,000</span></div>
+        <div class="stat-label">Total<br>Partnership</div>
+      </div>
+    </div>
+
+    <!-- OVERVIEW -->
+    <div class="section">
+      <div class="section-title">Overview</div>
+      <p>The No Boundaries Dance Foundation, Inc. invites the Moreno Valley City Council to partner with us in sponsoring our Annual Dance Concert — a premier community event celebrating youth, arts, and achievement.</p>
+      <p>This year's production will include <strong>three performances across June 26th and 27th</strong>, with an anticipated <strong>2,500 attendees</strong> from Moreno Valley and surrounding communities. The concert highlights the dedication and growth of our dancers while creating a meaningful experience for families and residents.</p>
+    </div>
+
+    <!-- SPONSORSHIP OPPORTUNITY -->
+    <div class="section">
+      <div class="section-title">Sponsorship Opportunity</div>
+      <p>We are offering sponsorship opportunities for key elements of the production at <strong>$1,000 each</strong>. Each of the five City Council members may sponsor a specific area of the production, directly aligning their support with a featured element of the show.</p>
+
+      <div class="area-grid" style="margin-top:16px;">
+        <div class="area-card">
+          <div class="area-num">Area 01</div>
+          <div class="area-name">Opening Number Sponsor</div>
+          <div class="area-desc">Kick off the show with a dynamic, high-energy performance that sets the tone for the entire event.</div>
+        </div>
+        <div class="area-card">
+          <div class="area-num">Area 02</div>
+          <div class="area-name">Grand Finale Sponsor</div>
+          <div class="area-desc">Support the powerful closing number featuring a full-cast performance that leaves a lasting impression.</div>
+        </div>
+        <div class="area-card">
+          <div class="area-num">Area 03</div>
+          <div class="area-name">Lobby Photo Experience</div>
+          <div class="area-desc">Sponsor the themed photo area — one of the most visible and highly engaged spaces throughout the event.</div>
+        </div>
+        <div class="area-card">
+          <div class="area-num">Area 04</div>
+          <div class="area-name">Production &amp; Tech Crew</div>
+          <div class="area-desc">Support lighting, sound, and stage management — ensuring a seamless, professional experience.</div>
+        </div>
+        <div class="area-card area-card-wide">
+          <div class="area-num">Area 05 · Flexible Option</div>
+          <div class="area-name">Community Impact Sponsorship</div>
+          <div class="area-desc">Direct your sponsorship toward costumes, set design, youth scholarships, or general production support.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-org">No Boundaries Dance Foundation, Inc. · Moreno Valley, California</div>
+    <div class="footer-accent"></div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 2 — CITY COUNCIL ===================== -->
+<div class="page">
+  <div class="header">
+    <div class="header-logo">
+      <img src="uploads/NBDF LOGO HOR@4x-0a31fb11.png" alt="No Boundaries Dance Foundation">
+    </div>
+    <div class="header-meta">
+      <div class="label">Annual Dance Concert Sponsorship</div>
+      <div class="city">Page 2 of 3</div>
+    </div>
+  </div>
+
+  <div class="body" style="padding-top:40px;">
+
+    <!-- SPONSOR RECOGNITION -->
+    <div class="section">
+      <div class="section-title">Sponsor Recognition &amp; Benefits</div>
+      <p>Each sponsoring council member will receive meaningful visibility and engagement opportunities:</p>
+      <ul class="bullet-list" style="margin-top:12px;">
+        <li><strong>Recognition in theater lobby signage</strong> during all performances</li>
+        <li><strong>Promotion to current clientele</strong> through studio communications</li>
+        <li><strong>Social media recognition and features</strong> across our platforms</li>
+        <li><strong>Inclusion in a local advertising publication</strong> connected to the event</li>
+        <li>Association with a <strong>2,500-attendee</strong> community event</li>
+        <li><strong>VIP Seating</strong> for sponsor + one guest at each performance</li>
+      </ul>
+    </div>
+
+    <!-- COMMUNITY IMPACT -->
+    <div class="section">
+      <div class="section-title">Community Impact</div>
+      <p>This annual concert is more than a performance — it is a structured opportunity for youth to grow in confidence, discipline, and teamwork. Through this event, dancers:</p>
+      <ul class="bullet-list" style="margin-top:12px;margin-bottom:14px;">
+        <li>Experience the reward of consistent training and commitment</li>
+        <li>Build self-confidence through performance</li>
+        <li>Engage in a positive and supportive environment</li>
+        <li>Represent the Moreno Valley community with pride</li>
+      </ul>
+      <p>City Council sponsorship directly supports the quality of this experience and reinforces a shared commitment to youth development and the arts.</p>
+    </div>
+
+    <!-- FUNDING REQUEST -->
+    <div class="section">
+      <div class="section-title">Funding Request</div>
+      <div class="highlight-box">
+        <div class="hb-label">Total Partnership Requested</div>
+        <div class="hb-amount">$5,000</div>
+        <div class="hb-sub">$1,000 per sponsorship × 5 council sponsors</div>
+      </div>
+    </div>
+
+    <!-- CLOSING -->
+    <div class="section" style="margin-bottom:0;">
+      <div class="section-title">Closing</div>
+      <p>This sponsorship opportunity offers a direct and visible way to support Moreno Valley youth while connecting with thousands of community members. We welcome the opportunity to partner with the Moreno Valley City Council to make this year's Annual Dance Concert an exceptional experience for all involved.</p>
+      <p>Thank you for your consideration and for your continued service to our community.</p>
+
+      <div class="sig-block">
+        <div style="width:80px;height:2px;background:var(--mint);border-radius:1px;margin-bottom:18px;margin-top:32px;"></div>
+        <div class="sig-name">Suzi Zuppardo</div>
+        <div class="sig-title">Director, No Boundaries Dance Foundation, Inc.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-org">No Boundaries Dance Foundation, Inc. · Moreno Valley, California</div>
+    <div class="footer-accent"></div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 3 — BUSINESS SPONSORS ===================== -->
+<div class="page">
+  <div class="header">
+    <div class="header-logo">
+      <img src="uploads/NBDF LOGO HOR@4x-0a31fb11.png" alt="No Boundaries Dance Foundation">
+    </div>
+    <div class="header-meta">
+      <div class="label">Official Proposal</div>
+      <div class="city">Business Sponsorship Opportunities</div>
+    </div>
+  </div>
+
+  <div class="title-band">
+    <h1>Annual Dance Concert — Business Sponsors</h1>
+    <span class="subtitle">June 26–27 · Three Performances</span>
+  </div>
+
+  <div class="body">
+
+    <div class="recipient">
+      <div class="recipient-to">
+        <div class="to-label">Submitted To</div>
+        <div class="to-name">Local Business Partners</div>
+        <div class="to-sub">Moreno Valley, California</div>
+      </div>
+      <div class="recipient-date">May 2026</div>
+    </div>
+
+    <!-- OVERVIEW -->
+    <div class="section">
+      <div class="section-title">Overview</div>
+      <p>The No Boundaries Dance Foundation, Inc. invites local businesses to partner with us in sponsoring our Annual Dance Concert — a vibrant community event celebrating youth, dedication, and the performing arts.</p>
+      <p>This year's production will include <strong>three performances across June 26th and 27th</strong>, with an anticipated <strong>2,500 attendees</strong> from Moreno Valley and surrounding communities. This event brings together families and local residents, offering a powerful opportunity for businesses to connect with the community in a meaningful way.</p>
+    </div>
+
+    <!-- SPONSORSHIP TIERS -->
+    <div class="section">
+      <div class="section-title">Sponsorship Levels</div>
+
+      <div class="tier-grid" style="margin-top:14px;">
+
+        <div class="tier-card">
+          <div class="tier-header">
+            <div class="tier-badge">🥉</div>
+            <div class="tier-name">Bronze</div>
+            <div class="tier-price">$500</div>
+          </div>
+          <div class="tier-body">
+            <ul>
+              <li>Recognition on <strong>shared sponsor signage</strong> in theater lobby</li>
+              <li>Mention in <strong>studio communications</strong> to clientele</li>
+              <li>Group acknowledgment on <strong>social media</strong></li>
+              <li>Contribution toward general production support</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tier-card">
+          <div class="tier-header">
+            <div class="tier-badge">🥈</div>
+            <div class="tier-name">Silver</div>
+            <div class="tier-price">$1,000</div>
+          </div>
+          <div class="tier-body">
+            <ul>
+              <li><strong>All Bronze benefits</strong>, plus:</li>
+              <li><strong>Prominent name placement</strong> on lobby signage</li>
+              <li>Featured <strong>social media recognition</strong></li>
+              <li>Inclusion in <strong>local advertising publication</strong></li>
+              <li><strong>VIP Seating</strong> for two guests at one performance</li>
+              <li>Opportunity to sponsor a <strong>specific production area</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tier-card gold">
+          <div class="tier-header">
+            <div class="tier-badge">🥇</div>
+            <div class="tier-name">Gold</div>
+            <div class="tier-price">$1,500</div>
+          </div>
+          <div class="tier-body">
+            <ul>
+              <li><strong>All Silver benefits</strong>, plus:</li>
+              <li><strong>Premium logo placement</strong> on all sponsor signage</li>
+              <li><strong>Dedicated social media spotlight</strong> post for your business</li>
+              <li>Verbal/printed recognition tied to <strong>featured production element</strong></li>
+              <li><strong>VIP Seating</strong> for two guests at each performance</li>
+              <li>"Preferred Business" feature in <strong>weekly email to 350+ families</strong> June–August 2026</li>
+              <li>Top-tier visibility as a leading community supporter</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MARKETING REACH -->
+    <div class="section">
+      <div class="section-title">Marketing &amp; Community Reach</div>
+      <p>Your sponsorship connects your business with:</p>
+      <ul class="bullet-list" style="margin-top:10px;">
+        <li><strong>2,500+ attendees</strong> across three performances</li>
+        <li><strong>350+ active client families</strong> through weekly email communication</li>
+        <li>Hundreds of local families within our engaged studio community</li>
+        <li>Ongoing promotion through <strong>email, social media, and local advertising</strong></li>
+      </ul>
+    </div>
+
+    <div class="sig-block" style="margin-top:8px;padding-top:24px;border-top:1.5px solid var(--rule);">
+      <p style="font-size:14px;line-height:1.75;color:var(--mid);margin-bottom:20px;">We would be honored to partner with your business to make this year's Annual Dance Concert an outstanding success. Thank you for your time and consideration.</p>
+      <div style="width:80px;height:2px;background:var(--mint);border-radius:1px;margin-bottom:18px;"></div>
+      <div class="sig-name">Suzi Zuppardo</div>
+      <div class="sig-title">Director, No Boundaries Dance Foundation, Inc.</div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-org">No Boundaries Dance Foundation, Inc. · Moreno Valley, California</div>
+    <div class="footer-accent"></div>
+  </div>
+</div>
+
+<script>
+document.fonts.ready.then(function() {
+  setTimeout(function() { window.print(); }, 600);
+});
+</script>
+</body>
+</html>

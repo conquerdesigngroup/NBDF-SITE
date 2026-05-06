@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>No Boundaries Dance Foundation</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Barlow+Condensed:wght@700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --mint: #3fffc8;
+  --mint-dark: #00c49a;
+  --dark: #0e0e0e;
+  --dark2: #1a1a1a;
+  --cream: #f5f3ef;
+  --warm-white: #fafaf8;
+  --mid: #444;
+  --subtle: #888;
+  --rule: #e0ddd8;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', Helvetica, sans-serif;
+  background: var(--warm-white);
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+/* ─── NAV ─── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 0 48px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.4s, box-shadow 0.4s;
+}
+
+nav.scrolled {
+  background: rgba(14,14,14,0.96);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.nav-logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--mint); }
+
+.nav-cta {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dark) !important;
+  background: var(--mint);
+  padding: 10px 22px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.nav-cta:hover { opacity: 0.85; }
+
+/* ─── HERO ─── */
+#hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  background: var(--dark);
+}
+
+.hero-parallax {
+  position: absolute;
+  inset: -20%;
+  background-image: url('uploads/werghjkjhgf.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  will-change: transform;
+  filter: brightness(0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 72px 96px;
+  max-width: 900px;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.hero-tag-line {
+  width: 32px;
+  height: 2px;
+  background: var(--mint);
+}
+
+.hero-tag span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mint);
+}
+
+.hero-headline {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(52px, 7vw, 96px);
+  font-weight: 400;
+  line-height: 1.0;
+  color: white;
+  margin-bottom: 28px;
+  text-wrap: balance;
+}
+
+.hero-headline em {
+  font-style: italic;
+  color: var(--mint);
+}
+
+.hero-sub {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.65);
+  max-width: 520px;
+  margin-bottom: 44px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.btn-primary {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dark);
+  background: var(--mint);
+  padding: 16px 36px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+.btn-ghost {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 15px 32px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-ghost:hover { border-color: var(--mint); color: var(--mint); }
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  right: 72px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-scroll-hint span {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  writing-mode: vertical-rl;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(63,255,200,0.8), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* ─── STAT BAR ─── */
+.stat-bar {
+  background: var(--dark2);
+  padding: 0 72px;
+  display: flex;
+  gap: 0;
+}
+
+.stat-item {
+  flex: 1;
+  padding: 36px 0;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  padding-right: 48px;
+  padding-left: 48px;
+  text-align: center;
+}
+
+.stat-item:first-child { padding-left: 0; text-align: left; }
+.stat-item:last-child { border-right: none; }
+
+.stat-num {
+  font-family: 'Barlow Condensed', Helvetica, sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-num span { color: var(--mint); }
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ─── SECTION SHARED ─── */
+section { position: relative; }
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
+
+/* ─── MISSION ─── */
+#mission {
+  background: var(--cream);
+  padding: 120px 0;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.mission-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mint-dark);
+  margin-bottom: 20px;
+}
+
+.mission-heading {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(36px, 3.5vw, 52px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--dark);
+  margin-bottom: 28px;
+  text-wrap: balance;
+}
+
+.mission-heading em { font-style: italic; color: var(--mint-dark); }
+
+.mission-body {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--mid);
+  margin-bottom: 20px;
+  text-wrap: pretty;
+}
+
+.mission-body + .mission-body { margin-top: 0; }
+
+.mission-img-wrap {
+  position: relative;
+}
+
+.mission-img-wrap img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%);
+}
+
+.mission-img-accent {
+  position: absolute;
+  bottom: -24px;
+  left: -24px;
+  width: 120px;
+  height: 120px;
+  background: var(--mint);
+  z-index: -1;
+}
+
+/* ─── PARALLAX BANNER ─── */
+.parallax-banner {
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-banner-bg {
+  position: absolute;
+  inset: -20%;
+  background-image: url('uploads/wfwqafwewwe-wwgroup-of-female-kids-practicing-at-2023-11-27-04-55-25-utc.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.35) saturate(0.3);
+  will-change: transform;
+}
+
+.parallax-banner-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 72px;
+}
+
+.parallax-quote {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(32px, 4vw, 60px);
+  font-weight: 400;
+  font-style: italic;
+  color: white;
+  max-width: 800px;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.parallax-quote span { color: var(--mint); font-style: normal; }
+
+/* ─── HOW TO HELP ─── */
+#help {
+  background: var(--warm-white);
+  padding: 120px 0;
+}
+
+.help-header {
+  margin-bottom: 64px;
+}
+
+.help-heading {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(40px, 4vw, 60px);
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+.help-sub {
+  font-size: 16px;
+  color: var(--subtle);
+  max-width: 480px;
+}
+
+.help-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+
+.help-card {
+  background: var(--warm-white);
+  padding: 44px 36px;
+  transition: background 0.25s;
+  cursor: default;
+}
+
+.help-card:hover { background: var(--cream); }
+
+.help-card-num {
+  font-family: 'Barlow Condensed', Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mint-dark);
+  margin-bottom: 20px;
+}
+
+.help-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.help-card-body {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--mid);
+  margin-bottom: 24px;
+}
+
+.help-card-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid var(--rule);
+  padding-top: 20px;
+  margin-top: 4px;
+}
+
+.help-card-list li {
+  font-size: 13px;
+  color: var(--mid);
+  padding-left: 16px;
+  position: relative;
+}
+
+.help-card-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 1px;
+  background: var(--mint-dark);
+}
+
+/* ─── EVENTS ─── */
+#events {
+  background: var(--dark);
+  padding: 120px 0;
+}
+
+.events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 56px;
+}
+
+.events-heading {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(40px, 4vw, 60px);
+  font-weight: 400;
+  font-style: italic;
+  color: white;
+}
+
+.events-heading em { font-style: normal; color: var(--mint); }
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.event-row {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: 32px;
+  align-items: center;
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: background 0.2s;
+  cursor: default;
+}
+
+.event-row:hover { background: rgba(255,255,255,0.02); }
+.event-row:hover .event-num { color: var(--mint); }
+
+.event-num {
+  font-family: 'Barlow Condensed', Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.25);
+  transition: color 0.2s;
+}
+
+.event-info {}
+
+.event-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.event-desc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+}
+
+.event-date {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--mint-dark);
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* ─── CONTACT ─── */
+#contact {
+  background: var(--cream);
+  padding: 120px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact-heading {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(36px, 3.5vw, 52px);
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 20px;
+  line-height: 1.15;
+}
+
+.contact-heading em { font-style: italic; color: var(--mint-dark); }
+
+.contact-body {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--mid);
+  margin-bottom: 36px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-detail {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.contact-detail-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mint-dark);
+  min-width: 80px;
+  padding-top: 2px;
+}
+
+.contact-detail-val {
+  font-size: 15px;
+  color: var(--dark);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  color: var(--dark);
+  background: var(--warm-white);
+  border: 1.5px solid var(--rule);
+  border-radius: 2px;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--mint-dark);
+}
+
+.form-group textarea { min-height: 120px; }
+
+.form-submit {
+  display: inline-block;
+  font-family: 'Barlow', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dark);
+  background: var(--mint);
+  border: none;
+  padding: 16px 36px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  align-self: flex-start;
+}
+
+.form-submit:hover { opacity: 0.88; transform: translateY(-1px); }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--dark);
+  padding: 64px 0 40px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 64px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  margin-bottom: 32px;
+}
+
+.footer-brand img { height: 32px; margin-bottom: 20px; }
+
+.footer-brand p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.4);
+  max-width: 280px;
+}
+
+.footer-col-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--mint); }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: rgba(255,255,255,0.2);
+}
+
+.footer-mint-bar {
+  width: 32px;
+  height: 2px;
+  background: var(--mint);
+  border-radius: 1px;
+}
+
+/* ─── REVEAL ANIMATIONS ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ─── MINT CURSOR DOT ─── */
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--mint);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s, width 0.2s, height 0.2s, opacity 0.2s;
+  opacity: 0;
+}
+
+.cursor-ring {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid rgba(63,255,200,0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease, width 0.25s, height 0.25s, opacity 0.3s;
+  opacity: 0;
+}
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo">
+    <img src="uploads/NBDF LOGO V2_SIDEWAYS@4x_square.png" alt="No Boundaries Dance Foundation">
+  </div>
+  <ul class="nav-links">
+    <li><a href="#mission">About</a></li>
+    <li><a href="#help">Get Involved</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Donate</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-parallax" id="heroParallax"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <div class="hero-tag-line"></div>
+      <span>No Boundaries Dance Foundation</span>
+    </div>
+    <h1 class="hero-headline">
+      We're on a mission<br>to make their future<br><em>possible.</em>
+    </h1>
+    <p class="hero-sub">A non-profit dedicated to expanding access to dance education for youth in Moreno Valley and the Inland Empire — removing financial barriers one dancer at a time.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Support a Dancer</a>
+      <a href="#mission" class="btn-ghost">Our Mission</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- STAT BAR -->
+<div class="stat-bar">
+  <div class="stat-item">
+    <div class="stat-num"><span>2,500</span>+</div>
+    <div class="stat-label">Annual Concert Attendees</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num"><span>5</span></div>
+    <div class="stat-label">Districts Served</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num"><span>350</span>+</div>
+    <div class="stat-label">Active Client Families</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num"><span>6</span></div>
+    <div class="stat-label">Month Programs</div>
+  </div>
+</div>
+
+<!-- MISSION -->
+<section id="mission">
+  <div class="section-inner">
+    <div class="mission-grid">
+      <div>
+        <div class="mission-eyebrow reveal">Our Mission</div>
+        <h2 class="mission-heading reveal reveal-delay-1">Dance is for <em>everyone</em> — regardless of means.</h2>
+        <p class="mission-body reveal reveal-delay-2">The No Boundaries Dance Foundation, Inc. provides opportunities for the disadvantaged of all ages, with a focus on dance training. Through our organization, we provide weekly classes, nutritional meals, and performance opportunities for children in the Inland Empire who are unable to financially attend.</p>
+        <p class="mission-body reveal reveal-delay-2">We hold fundraisers throughout the year to provide funding for the dancers — supported by volunteers, the board, and local businesses.</p>
+        <a href="#contact" class="btn-primary reveal reveal-delay-3" style="margin-top:32px;display:inline-block;">Get Involved</a>
+      </div>
+      <div class="mission-img-wrap reveal reveal-delay-2">
+        <img src="uploads/wfwqafwewwe-wwgroup-of-female-kids-practicing-at-2023-11-27-04-55-25-utc.jpg" alt="Young dancers in class">
+        <div class="mission-img-accent"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARALLAX BANNER -->
+<div class="parallax-banner">
+  <div class="parallax-banner-bg" id="bannerParallax"></div>
+  <div class="parallax-banner-content" style="justify-content: space-between; align-items: center;">
+    <p class="parallax-quote">"Every child deserves the chance to <span>move, grow,</span> and discover what they're capable of."</p>
+    <img src="uploads/NBDF LOGO V2_SIDEWAYS@4x_square.png" alt="No Boundaries Dance Foundation" style="height:72px;width:auto;opacity:0.85;flex-shrink:0;margin-left:80px;">
+  </div>
+</div>
+
+<!-- HOW TO HELP -->
+<section id="help">
+  <div class="section-inner">
+    <div class="help-header">
+      <div>
+        <h2 class="help-heading reveal">How you can help.</h2>
+        <p class="help-sub reveal reveal-delay-1">Three ways to make a direct impact on youth in our community.</p>
+      </div>
+    </div>
+    <div class="help-cards reveal">
+      <div class="help-card">
+        <div class="help-card-num">01 / Volunteer</div>
+        <div class="help-card-title">Volunteer With Us</div>
+        <div class="help-card-body">We're always looking for passionate individuals to help bring dance to the community — whether you're a dancer, teacher, or just a believer in our mission.</div>
+        <ul class="help-card-list">
+          <li>Assist in dance classes</li>
+          <li>Event support</li>
+          <li>Fundraising & community outreach</li>
+          <li>Administrative & marketing help</li>
+          <li>General assistance</li>
+        </ul>
+      </div>
+      <div class="help-card">
+        <div class="help-card-num">02 / Donate</div>
+        <div class="help-card-title">Make a Donation</div>
+        <div class="help-card-body">Your donation helps provide life-changing dance programs to individuals who need it most — from scholarships to adaptive programs to community outreach.</div>
+        <ul class="help-card-list">
+          <li>One-time contribution</li>
+          <li>Monthly giving — sustain year-round</li>
+          <li>Sponsor a dancer directly</li>
+        </ul>
+      </div>
+      <div class="help-card">
+        <div class="help-card-num">03 / Sponsor</div>
+        <div class="help-card-title">Business Sponsorship</div>
+        <div class="help-card-body">Connect your brand with thousands of community members while directly supporting youth development. Bronze, Silver, and Gold tiers available.</div>
+        <ul class="help-card-list">
+          <li>Concert production sponsorship</li>
+          <li>On-site coordination opportunities</li>
+          <li>Vendor coordination</li>
+          <li>VIP seating at performances</li>
+          <li>Social media & publication features</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="section-inner">
+    <div class="events-header reveal">
+      <h2 class="events-heading"><em>Upcoming</em> events.</h2>
+    </div>
+    <div class="events-list">
+      <div class="event-row reveal">
+        <div class="event-num">01</div>
+        <div class="event-info">
+          <div class="event-title">Annual Dance Concert — "Create"</div>
+          <div class="event-desc">Three performances celebrating the dedication and growth of our dancers. Approx. 2,500 attendees from Moreno Valley and surrounding communities.</div>
+        </div>
+        <div class="event-date">June 26–27, 2026</div>
+      </div>
+      <div class="event-row reveal reveal-delay-1">
+        <div class="event-num">02</div>
+        <div class="event-info">
+          <div class="event-title">Annual Fundraiser Gala</div>
+          <div class="event-desc">Support our cause and enjoy an evening of performances, live music, and silent auctions.</div>
+        </div>
+        <div class="event-date">Date TBA</div>
+      </div>
+      <div class="event-row reveal reveal-delay-2">
+        <div class="event-num">03</div>
+        <div class="event-info">
+          <div class="event-title">Inclusive Dance Showcase</div>
+          <div class="event-desc">A celebration of talent and diversity — featuring adaptive dancers, scholarship recipients, and community members.</div>
+        </div>
+        <div class="event-date">Date TBA</div>
+      </div>
+      <div class="event-row reveal reveal-delay-3">
+        <div class="event-num">04</div>
+        <div class="event-info">
+          <div class="event-title">Community Dance Day</div>
+          <div class="event-desc">A free event where everyone is welcome to participate in dance classes, workshops, and performances.</div>
+        </div>
+        <div class="event-date">Date TBA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div>
+        <h2 class="contact-heading reveal">Let's work together to <em>create your vision.</em></h2>
+        <p class="contact-body reveal reveal-delay-1">Whether you'd like to donate, sponsor, volunteer, or simply learn more — we'd love to hear from you.</p>
+        <div class="contact-details reveal reveal-delay-2">
+          <div class="contact-detail">
+            <div class="contact-detail-label">Location</div>
+            <div class="contact-detail-val">Moreno Valley, California</div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-label">Founded</div>
+            <div class="contact-detail-val">No Boundaries Dance Foundation, Inc.</div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-label">Director</div>
+            <div class="contact-detail-val">Suzi Zuppardo</div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form reveal reveal-delay-1" onsubmit="return false;">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Jane">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="jane@example.com">
+        </div>
+        <div class="form-group">
+          <label>I'm interested in</label>
+          <select>
+            <option value="">Select an option</option>
+            <option>Donating</option>
+            <option>Volunteering</option>
+            <option>Business Sponsorship</option>
+            <option>Sponsoring a Dancer</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell us how you'd like to get involved..."></textarea>
+        </div>
+        <button class="form-submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="uploads/NBDF LOGO V2_SIDEWAYS@4x_square.png" alt="NBDF">
+        <p>Expanding access to dance education for youth in Moreno Valley and the Inland Empire through scholarships, sponsorships, and outreach programs.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="#mission">About Us</a></li>
+          <li><a href="#help">Get Involved</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Follow Us</div>
+        <ul class="footer-links">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 No Boundaries Dance Foundation, Inc. · Moreno Valley, CA</div>
+      <div class="footer-mint-bar"></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ─── NAV SCROLL ───
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// ─── PARALLAX ───
+const heroParallax = document.getElementById('heroParallax');
+const bannerParallax = document.getElementById('bannerParallax');
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  if (heroParallax) {
+    heroParallax.style.transform = `translateY(${scrollY * 0.35}px)`;
+  }
+  if (bannerParallax) {
+    const bannerRect = bannerParallax.closest('.parallax-banner').getBoundingClientRect();
+    const offset = (window.innerHeight / 2 - bannerRect.top - bannerRect.height / 2);
+    bannerParallax.style.transform = `translateY(${offset * 0.25}px)`;
+  }
+}, { passive: true });
+
+// ─── REVEAL ON SCROLL ───
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+reveals.forEach(el => observer.observe(el));
+
+// ─── CUSTOM CURSOR ───
+const dot = document.getElementById('cursorDot');
+const ring = document.getElementById('cursorRing');
+let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  dot.style.left = mouseX + 'px';
+  dot.style.top = mouseY + 'px';
+  dot.style.opacity = '1';
+  ring.style.opacity = '1';
+});
+
+document.addEventListener('mouseleave', () => {
+  dot.style.opacity = '0';
+  ring.style.opacity = '0';
+});
+
+function animateRing() {
+  ringX += (mouseX - ringX) * 0.12;
+  ringY += (mouseY - ringY) * 0.12;
+  ring.style.left = ringX + 'px';
+  ring.style.top = ringY + 'px';
+  requestAnimationFrame(animateRing);
+}
+animateRing();
+
+// Enlarge ring on interactive elements
+document.querySelectorAll('a, button, .help-card, .event-row').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    ring.style.width = '56px';
+    ring.style.height = '56px';
+    ring.style.borderColor = 'rgba(63,255,200,0.8)';
+    dot.style.opacity = '0';
+  });
+  el.addEventListener('mouseleave', () => {
+    ring.style.width = '32px';
+    ring.style.height = '32px';
+    ring.style.borderColor = 'rgba(63,255,200,0.5)';
+    dot.style.opacity = '1';
+  });
+});
+
+// ─── SMOOTH NAV LINKS ───
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - 72;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>

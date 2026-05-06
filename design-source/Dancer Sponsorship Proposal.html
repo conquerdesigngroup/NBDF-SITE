@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Youth Dance Sponsorship Proposal — No Boundaries Dance Foundation</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --mint: #3fffc8;
+    --mint-dark: #00c49a;
+    --mint-label: #007a61;
+    --mint-light: rgba(63,255,200,0.10);
+    --mint-mid: rgba(63,255,200,0.22);
+    --dark: #111111;
+    --mid: #3a3a3a;
+    --subtle: #777;
+    --rule: #e2e2e2;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #c8c8c8;
+    font-family: 'Barlow', Helvetica, Arial, sans-serif;
+    color: var(--dark);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* PAGE CONTAINER */
+  .page {
+    width: 816px;
+    min-height: 1056px;
+    background: var(--white);
+    margin: 32px auto;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.13);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* HEADER */
+  .header {
+    background: var(--dark);
+    padding: 36px 56px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .header-logo img {
+    height: 44px;
+    width: auto;
+    display: block;
+  }
+
+  .header-meta {
+    text-align: right;
+  }
+
+  .header-meta .label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mint);
+    margin-bottom: 4px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  }
+
+  .header-meta .city {
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+  }
+
+  /* TITLE BAND */
+  .title-band {
+    background: var(--mint);
+    padding: 22px 56px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .title-band h1 {
+    font-family: 'Barlow Condensed', Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--dark);
+    line-height: 1;
+  }
+
+  .title-band .subtitle {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.5);
+    letter-spacing: 0.03em;
+  }
+
+  /* BODY */
+  .body {
+    padding: 44px 56px 56px;
+    flex: 1;
+  }
+
+  /* RECIPIENT BLOCK */
+  .recipient {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1.5px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .recipient-to {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .recipient-to .to-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mint-label);
+    margin-bottom: 6px;
+  }
+
+  .recipient-to .to-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.4;
+  }
+
+  .recipient-to .to-sub {
+    font-size: 13px;
+    color: var(--subtle);
+    margin-top: 2px;
+  }
+
+  .recipient-date {
+    font-size: 12px;
+    color: var(--subtle);
+    text-align: right;
+  }
+
+  /* OVERVIEW INTRO */
+  .intro {
+    font-size: 14.5px;
+    line-height: 1.75;
+    color: var(--mid);
+    margin-bottom: 36px;
+    text-wrap: pretty;
+  }
+
+  /* SECTION */
+  .section {
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-family: 'Barlow Condensed', Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--mint-label);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--mint-dark);
+  }
+
+  .section p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--mid);
+    text-wrap: pretty;
+    margin-bottom: 10px;
+  }
+
+  .section p:last-child { margin-bottom: 0; }
+
+  /* STATS ROW */
+  .stats-row {
+    display: flex;
+    gap: 1px;
+    background: var(--rule);
+    border: 1.5px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+
+  .stat-box {
+    flex: 1;
+    background: var(--white);
+    padding: 18px 20px;
+    text-align: center;
+  }
+
+  .stat-box .stat-num {
+    font-family: 'Barlow Condensed', Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-box .stat-num span {
+    color: var(--mint-dark);
+  }
+
+  .stat-box .stat-label {
+    font-size: 11px;
+    color: var(--subtle);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+  }
+
+  /* BULLET LIST */
+  .bullet-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .bullet-list li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--mid);
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .bullet-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 7px;
+    height: 2px;
+    background: var(--mint-dark);
+    border-radius: 1px;
+  }
+
+  .bullet-list li strong {
+    color: var(--dark);
+    font-weight: 600;
+  }
+
+  /* TWO-COL */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+
+  /* HIGHLIGHT BOX */
+  .highlight-box {
+    background: var(--mint-light);
+    border-left: 3px solid var(--mint-dark);
+    border-radius: 0 4px 4px 0;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+  }
+
+  .highlight-box .hb-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+
+  .highlight-box .hb-amount {
+    font-family: 'Barlow Condensed', Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .highlight-box .hb-sub {
+    font-size: 13px;
+    color: var(--mid);
+  }
+
+  /* CLOSING */
+  .closing {
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1.5px solid var(--rule);
+  }
+
+  .closing p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--mid);
+    margin-bottom: 12px;
+    text-wrap: pretty;
+  }
+
+  .sig-block {
+    margin-top: 28px;
+  }
+
+  .sig-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .sig-title {
+    font-size: 13px;
+    color: var(--subtle);
+    margin-top: 2px;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--dark);
+    padding: 14px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-org {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.04em;
+  }
+
+  .footer-accent {
+    width: 28px;
+    height: 2px;
+    background: var(--mint);
+    border-radius: 1px;
+  }
+
+  /* PAGE BREAK PAGES */
+  .page + .page {
+    margin-top: 0;
+  }
+
+  /* PRINT */
+  @media print {
+    @page { size: letter portrait; margin: 0; }
+    html, body { background: white; width: 100%; }
+    .page {
+      width: 100%;
+      margin: 0;
+      box-shadow: none;
+      min-height: 100vh;
+      break-after: page;
+      page-break-after: always;
+    }
+    .page:last-child {
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== PAGE 1 ===================== -->
+<div class="page">
+  <div class="header">
+    <div class="header-logo">
+      <img src="uploads/NBDF LOGO HOR@4x-0a31fb11.png" alt="No Boundaries Dance Foundation">
+    </div>
+    <div class="header-meta">
+      <div class="label">Official Proposal</div>
+      <div class="city">Submitted to the City of Moreno Valley</div>
+    </div>
+  </div>
+
+  <div class="title-band">
+    <h1>Youth Dance Sponsorship Program</h1>
+    <span class="subtitle">City Council Partnership Proposal</span>
+  </div>
+
+  <div class="body">
+
+    <div class="recipient">
+      <div class="recipient-to">
+        <div class="to-label">Submitted To</div>
+        <div class="to-name">Moreno Valley City Council</div>
+        <div class="to-sub">City of Moreno Valley, California</div>
+      </div>
+      <div class="recipient-date">May 2026</div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-num"><span>5</span></div>
+        <div class="stat-label">Dancers Sponsored<br>(One Per District)</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">$<span>1,500</span></div>
+        <div class="stat-label">Sponsorship<br>Per Dancer</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num"><span>6</span></div>
+        <div class="stat-label">Month<br>Program</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">$<span>7,500</span></div>
+        <div class="stat-label">Total<br>Investment</div>
+      </div>
+    </div>
+
+    <!-- OVERVIEW -->
+    <div class="section">
+      <div class="section-title">Overview</div>
+      <p>The No Boundaries Dance Foundation, Inc. is seeking partnership with the Moreno Valley City Council to support a targeted youth enrichment initiative through the arts. This proposal outlines an opportunity for each council member to sponsor one dancer from their district, providing access to high-quality dance education, mentorship, and personal development.</p>
+      <p>Our goal is simple: remove financial barriers and give deserving youth the opportunity to grow through structured training, discipline, and creative expression.</p>
+    </div>
+
+    <!-- PROGRAM STRUCTURE -->
+    <div class="section">
+      <div class="section-title">Program Structure</div>
+      <div class="two-col">
+        <div>
+          <p style="font-weight:600;color:var(--dark);font-size:13px;margin-bottom:10px;">Each Sponsored Dancer Receives:</p>
+          <ul class="bullet-list">
+            <li>Weekly dance classes (multiple styles)</li>
+            <li>Personalized coaching and skill development</li>
+            <li>Performance opportunities</li>
+            <li>Mentorship: confidence, discipline, goal setting</li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-weight:600;color:var(--dark);font-size:13px;margin-bottom:10px;">Funds Directly Cover:</p>
+          <ul class="bullet-list">
+            <li>Tuition and training expenses</li>
+            <li>Coaching and instructional support</li>
+            <li>Program materials</li>
+            <li>Performance preparation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FUNDING REQUEST -->
+    <div class="section">
+      <div class="section-title">Funding Request</div>
+      <div class="highlight-box">
+        <div class="hb-label">Total Investment Requested</div>
+        <div class="hb-amount">$7,500</div>
+        <div class="hb-sub">$1,500 per dancer × 5 dancers (one per council district)</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-org">No Boundaries Dance Foundation, Inc. · Moreno Valley, California</div>
+    <div class="footer-accent"></div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 2 ===================== -->
+<div class="page">
+  <div class="header">
+    <div class="header-logo">
+      <img src="uploads/NBDF LOGO HOR@4x-0a31fb11.png" alt="No Boundaries Dance Foundation">
+    </div>
+    <div class="header-meta">
+      <div class="label">Youth Dance Sponsorship Program</div>
+      <div class="city">Page 2 of 3</div>
+    </div>
+  </div>
+
+  <div class="body" style="padding-top:40px;">
+
+    <!-- COMMUNITY IMPACT -->
+    <div class="section">
+      <div class="section-title">Community Impact</div>
+      <p>This program is designed to serve youth who may not otherwise have access to structured arts education. Through this initiative, dancers will:</p>
+      <ul class="bullet-list" style="margin-top:12px;margin-bottom:14px;">
+        <li>Build confidence and self-esteem</li>
+        <li>Develop discipline and commitment</li>
+        <li>Improve physical and mental well-being</li>
+        <li>Engage in a positive, structured environment</li>
+        <li>Represent their community through performance</li>
+      </ul>
+      <p>Beyond the individual dancer, this investment strengthens families and contributes to a more connected, engaged community.</p>
+    </div>
+
+    <!-- SELECTION PROCESS -->
+    <div class="section">
+      <div class="section-title">Selection Process</div>
+      <p>Each council member will have the opportunity to collaborate with the No Boundaries Dance Foundation to identify a deserving participant from their district. Selection will prioritize:</p>
+      <ul class="bullet-list" style="margin-top:12px;">
+        <li>Financial need</li>
+        <li>Commitment and interest in dance</li>
+        <li>Potential for growth and positive community impact</li>
+      </ul>
+    </div>
+
+    <!-- ACCOUNTABILITY -->
+    <div class="section">
+      <div class="section-title">Accountability &amp; Reporting</div>
+      <p>The No Boundaries Dance Foundation will provide transparent reporting throughout the program:</p>
+      <ul class="bullet-list" style="margin-top:12px;margin-bottom:14px;">
+        <li>Progress updates on each sponsored dancer</li>
+        <li>Program participation summaries</li>
+        <li>End-of-program impact report</li>
+      </ul>
+      <p>Council members will have the opportunity to attend performances and see the direct results of their investment.</p>
+    </div>
+
+    <!-- SPONSOR RECOGNITION -->
+    <div class="section">
+      <div class="section-title">Sponsor Recognition &amp; Benefits</div>
+      <p>All sponsoring council members will receive the following recognition:</p>
+      <ul class="bullet-list" style="margin-top:12px;">
+        <li>Name posted in weekly digital newsletter through August 30th — <strong>750 homes reached weekly</strong></li>
+        <li>Name listed in the Annual Dance Concert <em>"Create"</em>, June 26th &amp; 27th — <strong>approx. 1,800 in attendance</strong></li>
+        <li>Two complimentary tickets to the Annual Dance Concert "Create," June 26th and June 27th</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-org">No Boundaries Dance Foundation, Inc. · Moreno Valley, California</div>
+    <div class="footer-accent"></div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 3 ===================== -->
+<div class="page">
+  <div class="header">
+    <div class="header-logo">
+      <img src="uploads/NBDF LOGO HOR@4x-0a31fb11.png" alt="No Boundaries Dance Foundation">
+    </div>
+    <div class="header-meta">
+      <div class="label">Youth Dance Sponsorship Program</div>
+      <div class="city">Page 3 of 3</div>
+    </div>
+  </div>
+
+  <div class="body" style="padding-top:40px;">
+
+    <!-- ABOUT -->
+    <div class="section">
+      <div class="section-title">About No Boundaries Dance Foundation</div>
+      <p>The No Boundaries Dance Foundation, Inc. is dedicated to expanding access to dance education for youth in our community. Through scholarships, sponsorships, and outreach programs, we strive to create opportunities that inspire growth, confidence, and lifelong skills.</p>
+    </div>
+
+    <!-- CLOSING -->
+    <div class="closing">
+      <div class="section-title">Closing</div>
+      <p>This is a focused, tangible way to impact five young lives — one from each district — while strengthening the cultural and developmental opportunities within Moreno Valley.</p>
+      <p>We welcome the opportunity to partner with the City Council and bring this vision to life. Thank you for your time, consideration, and continued commitment to our community.</p>
+
+      <div class="sig-block">
+        <div style="width:80px;height:2px;background:var(--mint);border-radius:1px;margin-bottom:18px;margin-top:32px;"></div>
+        <div class="sig-name">Suzi Zuppardo</div>
+        <div class="sig-title">Director, No Boundaries Dance Foundation, Inc.</div>
+      </div>
+    </div>
+
+    <!-- SUMMARY TABLE -->
+    <div style="margin-top:44px;border:1.5px solid var(--rule);border-radius:6px;overflow:hidden;">
+      <div style="background:var(--dark);padding:12px 20px;">
+        <span style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--mint);">Proposal at a Glance</span>
+      </div>
+      <table style="width:100%;border-collapse:collapse;">
+        <tr style="border-bottom:1px solid var(--rule);">
+          <td style="padding:12px 20px;font-size:13px;color:var(--subtle);font-weight:500;width:40%;">Program</td>
+          <td style="padding:12px 20px;font-size:13px;color:var(--dark);font-weight:600;">Youth Dance Sponsorship Program</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--rule);">
+          <td style="padding:12px 20px;font-size:13px;color:var(--subtle);font-weight:500;">Submitted To</td>
+          <td style="padding:12px 20px;font-size:13px;color:var(--dark);font-weight:600;">Moreno Valley City Council</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--rule);">
+          <td style="padding:12px 20px;font-size:13px;color:var(--subtle);font-weight:500;">Dancers Sponsored</td>
+          <td style="padding:12px 20px;font-size:13px;color:var(--dark);font-weight:600;">5 (one per council district)</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--rule);">
+          <td style="padding:12px 20px;font-size:13px;color:var(--subtle);font-weight:500;">Sponsorship Per Dancer</td>
+          <td style="padding:12px 20px;font-size:13px;color:var(--dark);font-weight:600;">$1,500</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--rule);">
+          <td style="padding:12px 20px;font-size:13px;color:var(--subtle);font-weight:500;">Program Duration</td>
+          <td style="padding:12px 20px;font-size:13px;color:var(--dark);font-weight:600;">6 months</td>
+        </tr>
+        <tr>
+          <td style="padding:12px 20px;font-size:13px;color:var(--subtle);font-weight:500;">Total Investment</td>
+          <td style="padding:12px 20px;font-size:14px;color:var(--dark);font-weight:700;">$7,500</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-org">No Boundaries Dance Foundation, Inc. · Moreno Valley, California</div>
+    <div class="footer-accent"></div>
+  </div>
+</div>
+
+</body>
+</html>
