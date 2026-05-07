@@ -6,6 +6,7 @@ import ParallaxBanner from "./_components/ParallaxBanner";
 import HelpCards from "./_components/HelpCards";
 import Marquee from "./_components/Marquee";
 import Events from "./_components/Events";
+import Gallery from "./_components/Gallery";
 import Contact from "./_components/Contact";
 import Footer from "./_components/Footer";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <HelpCards />
       <Marquee />
       <Events />
+      <Gallery />
       <Contact />
       <Footer />
     </>
