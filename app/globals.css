@@ -237,6 +237,98 @@ nav.scrolled {
   color: var(--mint);
 }
 
+/* Per-word stagger reveal for the hero headline. Each <span>/<em> gets
+   `--i` set inline by Hero.tsx; CSS uses it to compute animation-delay. */
+.hero-headline .hero-line {
+  display: block;
+}
+
+.hero-headline .hero-line > span,
+.hero-headline .hero-line > em {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(28px);
+  animation: heroWordIn 0.85s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  animation-delay: calc(var(--i, 0) * 80ms + 200ms);
+  /* Italic em needs to keep its slant inside inline-block. */
+  will-change: transform, opacity;
+}
+
+@keyframes heroWordIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tag, sub, and CTAs fade in after the headline finishes its stagger. */
+.hero-fade {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: heroFadeIn 0.7s ease-out forwards;
+  animation-delay: 150ms;
+}
+.hero-fade-late { animation-delay: 1050ms; }
+.hero-fade-latest { animation-delay: 1200ms; }
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Drifting mint blobs behind the hero copy. */
+.hero-blob {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 50%;
+  filter: blur(50px);
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+.hero-blob-1 {
+  width: 720px;
+  height: 720px;
+  bottom: -12%;
+  left: 4%;
+  background: radial-gradient(
+    circle at center,
+    rgba(63, 255, 200, 0.38) 0%,
+    rgba(63, 255, 200, 0.1) 40%,
+    transparent 72%
+  );
+  animation: blobDrift1 22s ease-in-out infinite;
+}
+
+.hero-blob-2 {
+  width: 480px;
+  height: 480px;
+  top: 6%;
+  right: 8%;
+  background: radial-gradient(
+    circle at center,
+    rgba(63, 255, 200, 0.26) 0%,
+    transparent 65%
+  );
+  animation: blobDrift2 28s ease-in-out infinite;
+  animation-delay: -8s;
+}
+
+@keyframes blobDrift1 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33%       { transform: translate3d(80px, -40px, 0) scale(1.08); }
+  66%       { transform: translate3d(-40px, 30px, 0) scale(0.94); }
+}
+
+@keyframes blobDrift2 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33%       { transform: translate3d(-60px, 50px, 0) scale(1.05); }
+  66%       { transform: translate3d(30px, -30px, 0) scale(0.96); }
+}
+
 .hero-sub {
   font-size: 17px;
   line-height: 1.7;
@@ -559,6 +651,49 @@ section { position: relative; }
   width: 6px;
   height: 1px;
   background: var(--mint-dark);
+}
+
+/* ─── MARQUEE STRIP ─── */
+.marquee {
+  background: var(--mint);
+  overflow: hidden;
+  padding: 32px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marqueeScroll 45s linear infinite;
+}
+
+.marquee-item {
+  font-family: var(--font-barlow-condensed), Helvetica, sans-serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dark);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  padding-right: 64px;
+}
+
+.marquee-item::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--dark);
+  margin-left: 64px;
+  flex-shrink: 0;
+}
+
+@keyframes marqueeScroll {
+  to { transform: translate3d(-50%, 0, 0); }
 }
 
 /* ─── EVENTS ─── */
@@ -904,6 +1039,25 @@ footer {
   transform: translate(-50%, -50%);
   transition: transform 0.15s ease, width 0.25s, height 0.25s, opacity 0.3s;
   opacity: 0;
+}
+
+/* ─── REDUCED MOTION ───
+   Honor users who've set "reduce motion" at the OS level.
+   We don't kill the headline reveal entirely (text still appears, just
+   without travel), but stop continuous loops (blobs, marquee). */
+@media (prefers-reduced-motion: reduce) {
+  .hero-headline .hero-line > span,
+  .hero-headline .hero-line > em,
+  .hero-fade {
+    animation-duration: 0.01ms;
+    animation-delay: 0ms;
+    transform: none;
+    opacity: 1;
+  }
+  .hero-blob,
+  .marquee-track {
+    animation: none;
+  }
 }
 
 /* ─────────────────────────────────────────────────────────

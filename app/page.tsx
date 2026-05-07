@@ -4,6 +4,7 @@ import StatBar from "./_components/StatBar";
 import Mission from "./_components/Mission";
 import ParallaxBanner from "./_components/ParallaxBanner";
 import HelpCards from "./_components/HelpCards";
+import Marquee from "./_components/Marquee";
 import Events from "./_components/Events";
 import Contact from "./_components/Contact";
 import Footer from "./_components/Footer";
@@ -17,6 +18,7 @@ export default function Home() {
       <Mission />
       <ParallaxBanner />
       <HelpCards />
+      <Marquee />
       <Events />
       <Contact />
       <Footer />
