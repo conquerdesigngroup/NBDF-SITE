@@ -31,8 +31,8 @@ export default function Mission() {
           <div className="mission-img-wrap reveal reveal-delay-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/uploads/mission-dancers.jpg"
-              alt="Young dancers in class"
+              src="/uploads/mission-sequins.jpg"
+              alt="Group of young dancers in sequined costumes laughing together"
             />
             <div className="mission-img-accent" />
           </div>
