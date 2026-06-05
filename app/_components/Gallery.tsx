@@ -8,8 +8,8 @@ const PHOTOS: { src: string; alt: string }[] = [
     alt: "Children stretching arms overhead during a dance class",
   },
   {
-    src: "/uploads/gallery-teens.jpg",
-    alt: "Teenagers practicing choreography in a brick studio",
+    src: "/uploads/gallery-jumping.jpg",
+    alt: "Three young dancers jumping in unison during a class, teacher watching",
   },
   {
     src: "/uploads/gallery-playground.jpg",
