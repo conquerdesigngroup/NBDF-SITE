@@ -11,13 +11,10 @@ export default function Events() {
           <div className="event-row reveal">
             <div className="event-num">01</div>
             <div className="event-info">
-              <div className="event-title">
-                Annual Dance Concert — &ldquo;Create&rdquo;
-              </div>
+              <div className="event-title">Annual Dance Concert</div>
               <div className="event-desc">
-                Three performances celebrating the dedication and growth of our
-                dancers. Approx. 2,500 attendees from Moreno Valley and
-                surrounding communities.
+                Two performances at Moreno Valley High School Theater
+                celebrating the dedication and growth of our dancers.
               </div>
             </div>
             <div className="event-date">June 26–27, 2026</div>
